@@ -1,8 +1,11 @@
-import {render} from "react-dom";
+import { render } from "react-dom";
 import App from "./components/App";
-import './index.scss'
+import "./index.scss";
+import { BrowserRouter } from "react-router-dom";
 
 render(
-    <App />,
-    document.getElementById('root')
-)
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
