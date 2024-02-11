@@ -1,0 +1,16 @@
+@import 'reset';
+@import './themes/dark';
+@import './themes/normal';
+@import './variables/global';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.app{
+  font: var(--font-m);
+  background-color: var(--bg-collor);
+  color: var(--primary-collor);
+  min-height: 100vh;
+}
