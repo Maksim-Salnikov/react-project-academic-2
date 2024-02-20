@@ -1,8 +1,8 @@
 {
-  "Текстовый пример":"Text example", 
-  "Перевод":"Transition",
+  "Текстовый пример": "Text example",
+  "Перевод": "Transition",
   "Главная страница": "MainPage",
-  "Язык":"English",
-  "О сайте":"About us"
-
+  "Язык": "English",
+  "О сайте": "About us",
+  "Страница не найдена": "Page not found"
 }
