@@ -17,11 +17,13 @@ module.exports = {
       },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
+        project: false,
         sourceType: 'script',
       },
     },
   ],
   parserOptions: {
+    project: false,
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
@@ -42,7 +44,16 @@ module.exports = {
     '@typescript-eslint/consistent-indexed-object-style': 'off',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      { markupOnly: true, ignoreAttribute: ['data-testid'] },
+    ],
     'max-len': ['error', { ignoreComments: true }],
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: { 'i18next/no-literal-string': 'off' },
+    },
+  ],
 }
