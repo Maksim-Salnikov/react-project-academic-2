@@ -17,6 +17,10 @@ module.exports = {
       },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
+        parser: {
+          ts: '@typescript-eslint/parser',
+          '<template>': 'espree',
+        },
         project: false,
         sourceType: 'script',
       },
