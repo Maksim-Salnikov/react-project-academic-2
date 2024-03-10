@@ -23,6 +23,10 @@ module.exports = {
     },
   ],
   parserOptions: {
+    parser: {
+      ts: '@typescript-eslint/parser',
+      '<template>': 'espree',
+    },
     project: false,
     ecmaVersion: 'latest',
     sourceType: 'module',
