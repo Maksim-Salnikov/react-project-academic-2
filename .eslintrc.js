@@ -46,7 +46,7 @@ module.exports = {
     '@typescript-eslint/prefer-ts-expect-error': 'off',
     'i18next/no-literal-string': [
       'error',
-      { markupOnly: true, ignoreAttribute: ['data-testid'] },
+      { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
     ],
     'max-len': ['error', { ignoreComments: true }],
   },
