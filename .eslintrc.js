@@ -17,20 +17,12 @@ module.exports = {
       },
       files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
-        parser: {
-          ts: '@typescript-eslint/parser',
-          '<template>': 'espree',
-        },
         project: 'tsconfig.json',
         sourceType: 'script',
       },
     },
   ],
   parserOptions: {
-    parser: {
-      ts: '@typescript-eslint/parser',
-      '<template>': 'espree',
-    },
     project: 'tsconfig.json',
     ecmaVersion: 'latest',
     sourceType: 'module',
