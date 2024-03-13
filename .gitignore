@@ -2,3 +2,5 @@
 /build
 /package-lock.json
 /storybook-static
+.loki/report.html
+.loki/report.json
