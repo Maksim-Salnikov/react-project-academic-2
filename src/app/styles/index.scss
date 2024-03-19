@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font: var(--font-m);
+  color: var(--primary-collor);
+}
+
 .app {
   font: var(--font-m);
   background-color: var(--bg-collor);
