@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { BugButton } from 'app/providers/ErrorBoundary/indes'
 import { useTranslation } from 'react-i18next'
 

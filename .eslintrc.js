@@ -48,6 +48,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-imports': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
     '@typescript-eslint/no-misused-promises': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     'i18next/no-literal-string': [
       'error',
       { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },

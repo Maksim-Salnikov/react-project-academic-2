@@ -8,5 +8,8 @@
   "Выбросить ошибку": "Throw error",
   "Обновить страницу": "Reload page",
   "Произошла непредвиденная ошибка": "An unexpected error occurred",
-  "Короткий язык": "EN"
+  "Короткий язык": "EN",
+  "Введите username": "Enter username",
+  "Введите пароль": "Enter password",
+  "Войти": "Input"
 }
