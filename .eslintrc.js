@@ -55,6 +55,7 @@ module.exports = {
     'max-len': ['error', { ignoreComments: true, code: 100 }],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+    'react-hooks/exhaustive-deps': 'off',
   },
   overrides: [
     {

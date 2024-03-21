@@ -9,15 +9,14 @@
   box-sizing: border-box;
 }
 
-body {
+.app,
+.app_modal {
   font: var(--font-m);
   color: var(--primary-collor);
 }
 
 .app {
-  font: var(--font-m);
   background-color: var(--bg-collor);
-  color: var(--primary-collor);
   min-height: 100vh;
 }
 
