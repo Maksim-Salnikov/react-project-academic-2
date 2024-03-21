@@ -1,4 +1,5 @@
 /config
 /scripts
+/json-server
 .eslintrc.js
 webpack.config.ts
