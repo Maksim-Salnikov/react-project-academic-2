@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Максим",
+    "lastname": "Сальников",
+    "age": 22,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Saint - Petersburg",
+    "username": "admin",
+    "avatar": "https://sun9-28.userapi.com/impg/pHKaXWGNrHKw4QOQr4VWWiFK3Kpt8Qz-QmB4Pw/6X8gxzpuTiY.jpg?size=807x800&quality=95&sign=f5ac6977a97e9a4b63790e6d3efd9d77&c_uniq_tag=fkUN5A5s3N990d_Fq6tb-RiR-hdrXHceqVlLsPuuuDw&type=album"
+  }
 }

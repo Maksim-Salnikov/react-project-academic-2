@@ -31,20 +31,6 @@
   flex-direction: column;
 }
 
-.item {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.link {
-  margin-left: 10px;
-}
-
-.icon {
-  fill: var(--inverted-primary-collor);
-}
-
 .collapsed {
   width: var(--sidebar-widht-collapsed);
 
