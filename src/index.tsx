@@ -8,14 +8,14 @@ import { ErrorBoundary } from 'app/providers/ErrorBoundary/indes'
 import { StoreProvider } from 'app/providers/StoreProvider'
 
 render(
-  <StoreProvider>
-    <ErrorBoundary>
-      <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
+      <ErrorBoundary>
         <ThemeProvider>
           <App />
         </ThemeProvider>
-      </BrowserRouter>
-    </ErrorBoundary>
-  </StoreProvider>,
+      </ErrorBoundary>
+    </StoreProvider>
+  </BrowserRouter>,
   document.getElementById('root'),
 )
