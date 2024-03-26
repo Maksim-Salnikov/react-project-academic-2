@@ -6,7 +6,7 @@ import { SidebarItemType } from 'widgets/Sidebar/model/items'
 import { memo } from 'react'
 
 interface SidebarItemProps {
-  item?: SidebarItemType
+  item: SidebarItemType
   collapsed: boolean
 }
 

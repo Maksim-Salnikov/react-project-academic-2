@@ -15,7 +15,6 @@ export const loginByUsername = createAsyncThunk<
   ThunkConfig<string>
 >('login/loginByUsername', async ({ username, password }, thunkApi) => {
   const { dispatch, extra, rejectWithValue } = thunkApi
-
   try {
     const response = await extra.api.post<User>('/login', {
       username,
@@ -28,7 +27,7 @@ export const loginByUsername = createAsyncThunk<
 
     localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data))
     dispatch(userActions.setAuthData(response.data))
-    extra.navigate('/about')
+    extra.navigate?.('/about')
     return response.data
   } catch (e) {
     console.log(e)
