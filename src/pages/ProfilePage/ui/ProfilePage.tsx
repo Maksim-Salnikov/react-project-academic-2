@@ -32,7 +32,7 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
-  const { t } = useTranslation('profile')
+  const { t } = useTranslation()
   const dispatch = useAppDispatch()
   const formData = useSelector(getProfileForm)
   const isloading = useSelector(getProfileIsloading)
