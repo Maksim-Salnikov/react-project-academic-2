@@ -1,5 +1,3 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ProfilePage.module.scss'
 import {
   DynamicModuleLoader,
   ReducersList,
@@ -32,7 +30,7 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation('profile')
   const dispatch = useAppDispatch()
   const formData = useSelector(getProfileForm)
   const isloading = useSelector(getProfileIsloading)
@@ -49,7 +47,9 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
   }
 
   useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [dispatch])
 
   const onChangeFirstname = useCallback(
@@ -110,7 +110,7 @@ const ProfilePage = ({ className }: ProfilePageProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <div className={classNames(cls.ProfilePage, {}, [className])}>
+      <div>
         <ProfilePageHeader />
         {validateErrors?.length &&
           validateErrors.map((err) => (
