@@ -23,7 +23,7 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ABOUT]: '/about',
   [AppRoutes.PROFILE]: '/profile',
   [AppRoutes.ARTICLES]: '/articles',
-  [AppRoutes.ARTICLE_DETAILS]: '/article_details', // + :id
+  [AppRoutes.ARTICLE_DETAILS]: '/articles/', // + :id
   // last
   [AppRoutes.NOT_FOUND]: '*',
 }
@@ -48,13 +48,13 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     authOnly: true,
   },
   [AppRoutes.ARTICLE_DETAILS]: {
-    path: `${RoutePath.articles}:id`,
+    path: `${RoutePath.article_details}:id`,
     element: <ArticleDetailPage />,
     authOnly: true,
   },
   // last
   [AppRoutes.NOT_FOUND]: {
-    path: RoutePath.article_details,
+    path: RoutePath.not_found,
     element: <NotFoundPage />,
   },
 }
