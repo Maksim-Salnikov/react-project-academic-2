@@ -1,7 +1,7 @@
 export enum ArticleBlockType {
-  CODE = 'code',
-  IMAGE = 'image',
-  TEXT = 'text',
+  CODE = 'CODE',
+  IMAGE = 'IMAGE',
+  TEXT = 'TEXT',
 }
 
 export interface ArticleBlockBase {
@@ -26,7 +26,7 @@ export interface ArticleTextBlock extends ArticleBlockBase {
   paragraphs: string[]
 }
 
-export type AtricleBlock =
+export type ArticleBlock =
   | ArticleCodeBlock
   | ArticleImageBlock
   | ArticleTextBlock
@@ -45,5 +45,5 @@ export interface Article {
   views: number
   createdAt: string
   type: ArticleType[]
-  blocks: AtricleBlock[]
+  blocks: ArticleBlock[]
 }

@@ -1,5 +1,4 @@
-import { CSSProperties, FC } from 'react'
-import { useTranslation } from 'react-i18next'
+import { CSSProperties } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Skeleton.module.scss'
 
@@ -12,7 +11,6 @@ interface SkeletonProps {
 
 export const Skeleton = (props: SkeletonProps) => {
   const { className, border, height, width } = props
-  const { t } = useTranslation()
 
   const styles: CSSProperties = { width, height, borderRadius: border }
 

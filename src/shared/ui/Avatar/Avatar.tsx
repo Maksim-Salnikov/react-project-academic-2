@@ -4,7 +4,7 @@ import { CSSProperties, useMemo } from 'react'
 
 interface AvatarProps {
   className?: string
-  src: string
+  src: string | undefined
   size?: number
   alt?: string
 }
