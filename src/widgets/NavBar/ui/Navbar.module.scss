@@ -4,7 +4,7 @@
   background: var(--inverted-bg-collor);
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: calc((var(--navbar-height) - 24px) / 2);
 }
 
 .links {

@@ -1,0 +1,11 @@
+.addNewComment {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid var(--primary-collor);
+  padding: 20px;
+  align-items: center;
+}
+
+.input {
+  flex-grow: 1;
+}
