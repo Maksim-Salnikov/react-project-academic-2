@@ -22,7 +22,7 @@ import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { useInitialEffect } from 'shared/lib/hooks/useAppDispatch/useInitialEffect'
+import { useInitialEffect } from 'shared/lib/hooks/useIntitialEffect/useInitialEffect'
 import { useParams } from 'react-router-dom'
 
 const reducers: ReducersList = { profile: profileReducer }
