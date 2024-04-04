@@ -94,7 +94,6 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
     // eslint-disable-next-line i18next/no-literal-string
     <div className={classNames(cls.articlesPage, {}, [className])}>
       <ArticleList
-        isLoading
         view={ArticleView.BIG}
         articles={new Array(16)
           .fill(0)
