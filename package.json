@@ -18,7 +18,7 @@
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
-    "storybook:build": "build-storybook -c ./config/storybook && loki update --storiesFilter=\"^entities\\/Comments\\/CommentCard Normal|entities\\/Comments\\/CommentCard Loading|entities\\/Comments\\/CommentList Normal|entities\\/Comments\\/CommentList Loading|features\\/AddNewComment Normal|shared\\/Skeleton Circle|shared\\/Skeleton Circle Dark|features\\/LoginForm Primary|features\\/LoginForm With Error|features\\/LoginForm Loading|entities\\/ProfileCard Primary|Pages\\/ProfilePage Normal|Pages\\/ProfilePage Dark$\" --reactUri=\"file:./storybook-static\"",
+    "storybook:build": "build-storybook -c ./config/storybook && loki update --storiesFilter=\"^shared\\/Skeleton Circle Dark|entities\\/Comments\\/CommentCard Normal|entities\\/Comments\\/CommentCard Loading|entities\\/Comments\\/CommentList Normal|entities\\/Comments\\/CommentList Loading|features\\/AddNewComment Normal|shared\\/Skeleton Circle|features\\/LoginForm Primary|features\\/LoginForm With Error|features\\/LoginForm Loading|entities\\/ProfileCard Primary|Pages\\/ProfilePage Normal|Pages\\/ProfilePage Dark$\" --reactUri=\"file:./storybook-static\"",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:report": "npx reg-cli --from .loki/report.json --report .loki/report.html",
     "prepare": "husky install"
