@@ -1,7 +1,7 @@
-import { addNewComment } from './../types/addNewComment'
+import { AddNewCommentSchema } from './../types/addNewComment'
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-const initialState: addNewComment = {
+const initialState: AddNewCommentSchema = {
   text: '',
   error: '',
 }
