@@ -19,9 +19,11 @@ import { fetchArticlesList } from '../../model/services/fetchArticlesList'
 import { useSelector } from 'react-redux'
 import {
   getArticlePageIsLoading,
+  getArticlePageNum,
   getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors'
 import { ArticleView } from 'entities/Article/model/types/article'
+import { Page } from 'shared/ui/Page/Page'
 
 interface ArticlesPageProps {
   className?: string
@@ -38,6 +40,7 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlePageIsLoading)
   const view = useSelector(getArticlePageView)
+  const page = useSelector(getArticlePageNum)
 
   const onChangeView = useCallback(
     (view: ArticleView) => {
@@ -46,17 +49,33 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
     [dispatch],
   )
 
+  const onLoadNextPart = useCallback(() => {
+    dispatch(articlesPageActions.setPage(page + 1))
+    dispatch(
+      fetchArticlesList({
+        page: page + 1,
+      }),
+    )
+  }, [dispatch, page])
+
   useInitialEffect(() => {
-    dispatch(fetchArticlesList())
     dispatch(articlesPageActions.initState())
+    dispatch(
+      fetchArticlesList({
+        page: 1,
+      }),
+    )
   })
   return (
     // eslint-disable-next-line i18next/no-literal-string
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.articlesPage, {}, [className])}>
+      <Page
+        onScrollEnd={onLoadNextPart}
+        className={classNames(cls.articlesPage, {}, [className])}
+      >
         <ArticleViewSelector view={view} onViewClick={onChangeView} />
         <ArticleList isLoading={isLoading} view={view} articles={articles} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 }
