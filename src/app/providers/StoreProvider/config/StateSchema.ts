@@ -11,6 +11,7 @@ import { CounterSchema } from 'entities/Counter'
 import { ProfileSchema } from 'entities/Profile'
 import { UserSchema } from 'entities/User'
 import { LoginSchema } from 'features/AuthByUsername'
+import { UISchema } from 'features/UI'
 import { AddNewCommentSchema } from 'features/addNewComment'
 import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage'
 import { ArticlePageSchema } from 'pages/ArticlesPage'
@@ -18,6 +19,7 @@ import { ArticlePageSchema } from 'pages/ArticlesPage'
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
+  ui: UISchema
 
   // Асинхронные редусеры
   loginForm?: LoginSchema
