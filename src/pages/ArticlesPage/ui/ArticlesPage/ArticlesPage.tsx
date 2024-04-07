@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { FC, memo, useCallback } from 'react'
 // import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -15,15 +14,15 @@ import {
 } from '../../model/slices/articlePageSlice'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from 'shared/lib/hooks/useIntitialEffect/useInitialEffect'
-import { fetchArticlesList } from '../../model/services/fetchArticlesList'
+import { fetchArticlesList } from '../../model/services/fetchArticlesList/fetchArticlesList'
 import { useSelector } from 'react-redux'
 import {
   getArticlePageIsLoading,
-  getArticlePageNum,
   getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors'
 import { ArticleView } from 'entities/Article/model/types/article'
 import { Page } from 'shared/ui/Page/Page'
+import { fetchNextArticlePage } from 'pages/ArticlesPage/model/services/fetchNextArticlePage/fetchNextArticlePage'
 
 interface ArticlesPageProps {
   className?: string
@@ -40,7 +39,6 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   const articles = useSelector(getArticles.selectAll)
   const isLoading = useSelector(getArticlePageIsLoading)
   const view = useSelector(getArticlePageView)
-  const page = useSelector(getArticlePageNum)
 
   const onChangeView = useCallback(
     (view: ArticleView) => {
@@ -50,13 +48,8 @@ const ArticlesPage: FC<ArticlesPageProps> = (props) => {
   )
 
   const onLoadNextPart = useCallback(() => {
-    dispatch(articlesPageActions.setPage(page + 1))
-    dispatch(
-      fetchArticlesList({
-        page: page + 1,
-      }),
-    )
-  }, [dispatch, page])
+    dispatch(fetchNextArticlePage())
+  }, [dispatch])
 
   useInitialEffect(() => {
     dispatch(articlesPageActions.initState())

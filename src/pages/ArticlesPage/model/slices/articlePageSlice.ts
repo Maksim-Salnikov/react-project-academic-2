@@ -7,7 +7,7 @@ import { StateSchema } from 'app/providers/StoreProvider'
 import { Article } from 'entities/Article'
 import { ArticlePageSchema } from '../types/articlePageSchema'
 import { ArticleView } from 'entities/Article/model/types/article'
-import { fetchArticlesList } from '../services/fetchArticlesList'
+import { fetchArticlesList } from '../services/fetchArticlesList/fetchArticlesList'
 import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const/localStorage'
 
 const articlesAdapter = createEntityAdapter<Article>({
@@ -55,7 +55,8 @@ const articlePageSlice = createSlice({
         fetchArticlesList.fulfilled,
         (state, action: PayloadAction<Article[]>) => {
           state.isLoading = false
-          articlesAdapter.setAll(state, action.payload)
+          articlesAdapter.addMany(state, action.payload)
+          state.hasMore = action.payload.length > 0
         },
       )
       .addCase(fetchArticlesList.rejected, (state, action) => {

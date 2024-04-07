@@ -2,7 +2,7 @@ import i18n from 'i18next'
 import { createAsyncThunk } from '@reduxjs/toolkit'
 import { ThunkConfig } from 'app/providers/StoreProvider'
 import { Article } from 'entities/Article'
-import { getArticlePageLimit } from '../selectors/articlesPageSelectors'
+import { getArticlePageLimit } from '../../selectors/articlesPageSelectors'
 
 interface FetchArticlesListProps {
   page?: number
