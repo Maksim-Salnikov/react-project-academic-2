@@ -59,6 +59,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/unbound-method': 'off',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off',
   },
   overrides: [
     {
