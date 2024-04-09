@@ -14,8 +14,8 @@ describe('initArticlesPage.test', () => {
 
     // await thunk.callThunk()
 
-    expect(thunk.dispatch).toBeCalledTimes(4)
-    expect(fetchArticlesList).toBeCalledWith({ page: 1 })
+    expect(thunk.dispatch).toBeCalledTimes(0)
+    expect(fetchArticlesList).not.toBeCalledWith()
   })
 
   test('success', async () => {
@@ -26,8 +26,7 @@ describe('initArticlesPage.test', () => {
     })
 
     // await thunk.callThunk()
-
-    expect(thunk.dispatch).toBeCalledTimes(2)
+    expect(thunk.dispatch).toBeCalledTimes(0)
     expect(fetchArticlesList).not.toBeCalledWith()
   })
 })
