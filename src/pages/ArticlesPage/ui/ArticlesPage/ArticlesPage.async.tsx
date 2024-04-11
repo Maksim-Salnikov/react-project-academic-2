@@ -1,11 +1,4 @@
 import { lazy } from 'react'
 
-export const ArticlesPageAsync = lazy(
-  async () =>
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        // @ts-ignore
-        resolve(import('./ArticlesPage'))
-      }, 400)
-    }),
-)
+// eslint-disable-next-line @typescript-eslint/promise-function-async
+export const ArticlesPageAsync = lazy(() => import('./ArticlesPage'))

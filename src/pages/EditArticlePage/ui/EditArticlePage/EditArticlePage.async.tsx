@@ -1,11 +1,4 @@
 import { lazy } from 'react'
 
-export const EditArticlePageAsync = lazy(
-  async () =>
-    await new Promise((resolve) => {
-      setTimeout(() => {
-        // @ts-ignore
-        resolve(import('./EditArticlePage'))
-      }, 400)
-    }),
-)
+// eslint-disable-next-line @typescript-eslint/promise-function-async
+export const EditArticlePageAsync = lazy(() => import('./EditArticlePage'))
