@@ -9,4 +9,14 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+
+  .card {
+    display: inline-flex;
+    height: 300px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
 }
