@@ -27,7 +27,13 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'max-plugin',
+  ],
   rules: {
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
@@ -60,6 +66,7 @@ module.exports = {
     '@typescript-eslint/no-dynamic-delete': 'off',
     '@typescript-eslint/unbound-method': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+    'max-plugin/path-checker': 'error',
   },
   overrides: [
     {

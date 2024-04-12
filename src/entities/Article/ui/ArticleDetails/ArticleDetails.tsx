@@ -8,13 +8,13 @@ import {
 } from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { fetchArticleById } from 'entities/Article/model/services/fetchArticleById/fetchArticleById'
+import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { useSelector } from 'react-redux'
 import {
   getArticleDetailsData,
   getArticleDetailsError,
   getArticleDetailsIsloading,
-} from 'entities/Article/model/selectors/articeDetails'
+} from '../../model/selectors/articeDetails'
 import { Text, TextAlign, TextSize, TextTheme } from 'shared/ui/Text/Text'
 import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
 import { Avatar } from 'shared/ui/Avatar/Avatar'
