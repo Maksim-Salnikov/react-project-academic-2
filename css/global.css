@@ -1,5 +1,5 @@
 :root {
-  --font-family-main: consolas, 'Times New Roman', serif;
+  --font-family-main: consolas, "Times New Roman", serif;
   --font-size-s: 12px;
   --font-line-s: 20px;
   --font-s: var(--font-size-s) / var(--font-line-s) var(--font-family-main);
@@ -12,17 +12,11 @@
   --font-size-xl: 32px;
   --font-line-xl: 40px;
   --font-xl: var(--font-size-xl) / var(--font-line-xl) var(--font-family-main);
-
-  // Размеры
   --navbar-height: 60px;
   --sidebar-widht: 300px;
   --sidebar-widht-collapsed: 80px;
-
-  // z - Индексы
   --modal-z-index: 10;
-
-  // Цвета
   --overlay-collor: rgba(0 0 0 / 60%);
   --error-color-light: #ff0303;
   --error-color-dark: #ce0505;
-}
+}/*# sourceMappingURL=global.css.map */
