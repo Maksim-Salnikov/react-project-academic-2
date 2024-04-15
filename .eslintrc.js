@@ -57,7 +57,10 @@ module.exports = {
     '@typescript-eslint/no-unsafe-argument': 'off',
     'i18next/no-literal-string': [
       'error',
-      { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] },
+      {
+        markupOnly: true,
+        ignoreAttribute: ['data-testid', 'to', 'justify', 'align', 'direction'],
+      },
     ],
     'max-len': ['error', { ignoreComments: true, code: 120 }],
     'react-hooks/rules-of-hooks': 'error',

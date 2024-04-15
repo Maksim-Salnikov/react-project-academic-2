@@ -15,6 +15,7 @@ import {
 import { useSelector } from 'react-redux'
 import { getAddNewCommentText } from '../../model/selectors/addNewCommentSelectors'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { HStack } from 'shared/ui/Stack'
 
 export interface AddNewCommentProps {
   className?: string
@@ -45,7 +46,11 @@ const AddNewComment: FC<AddNewCommentProps> = (props) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.addNewComment, {}, [className])}>
+      <HStack
+        justify="between"
+        max
+        className={classNames(cls.addNewComment, {}, [className])}
+      >
         <Input
           value={text}
           onChange={onChangeTextComment}
@@ -55,7 +60,7 @@ const AddNewComment: FC<AddNewCommentProps> = (props) => {
         <Button onClick={onSendHandler} theme={ButtonTheme.OUTLINE}>
           {t('Отправить')}
         </Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   )
 }
