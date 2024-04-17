@@ -35,7 +35,7 @@ export const CountrySelect = (props: CountrySelectProps) => {
       label={t('Укажите страну')}
       value={value}
       onChange={onChangeHandler}
-      direction="top"
+      direction="top-right"
     />
   )
 }

@@ -35,7 +35,7 @@ export const CurrencySelect = (props: CurrencySelectProps) => {
       label={t('Укажите валюту')}
       items={options}
       onChange={onChangeHandler}
-      direction="top"
+      direction="top-right"
     />
   )
 }
