@@ -5,7 +5,7 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { HTMLAttributeAnchorTarget } from 'react'
+import { HTMLAttributeAnchorTarget, memo } from 'react'
 import { List, ListRowProps, WindowScroller } from 'react-virtualized'
 import { PAGE_ID } from 'widgets/Page/Page'
 
@@ -25,7 +25,7 @@ const getSkeletons = (view: ArticleView) => {
     ))
 }
 
-export const ArticleList = (props: ArticleListProps) => {
+export const ArticleList = memo((props: ArticleListProps) => {
   const {
     className,
     articles,
@@ -49,7 +49,7 @@ export const ArticleList = (props: ArticleListProps) => {
     for (let i = fromIndex; i < toIndex; i++) {
       items.push(
         <ArticleListItem
-          article={articles[index]}
+          article={articles[i]}
           view={view}
           className={cls.card}
           target={target}
@@ -100,9 +100,5 @@ export const ArticleList = (props: ArticleListProps) => {
         </div>
       )}
     </WindowScroller>
-    // <div className={classNames(cls.articleList, {}, [className, cls[view]])}>
-    //   {articles.length > 0 ? articles.map(renderArticle) : null}
-    //   {isLoading && getSkeletons(view)}
-    // </div>
   )
-}
+})
