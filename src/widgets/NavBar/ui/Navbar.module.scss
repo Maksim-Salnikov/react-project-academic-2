@@ -4,12 +4,14 @@
   background: var(--inverted-bg-collor);
   display: flex;
   align-items: center;
-  padding: calc((var(--navbar-height) - 24px) / 2);
+  padding: calc((var(--navbar-height) - var(--navbar-inside)) / 2);
 }
 
 .links,
 .dropdown {
   margin-left: auto;
+  width: 30px;
+  height: 30px;
 }
 
 .mainLink {
