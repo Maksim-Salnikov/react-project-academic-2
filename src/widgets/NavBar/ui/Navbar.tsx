@@ -36,26 +36,24 @@ export const NavBar = memo(({ className }: NavBarProps) => {
 
   if (authData) {
     return (
-      <>
-        <header className={classNames(cls.navbar, {}, [className])}>
-          <AppLink
-            theme={AppLinkTheme.SECONDARY}
-            to={RoutePath.article_create}
-            className={cls.newArticleBtn}
-          >
-            {t('Создать статью')}
-          </AppLink>
-          <Dropdown
-            direction="bottom-left"
-            className={cls.dropdown}
-            items={[
-              { content: t('Выйти'), onClick: onLogout },
-              { content: t('Профиль'), href: RoutePath.profile + authData.id },
-            ]}
-            trigger={<Avatar size={30} src={authData.avatar} />}
-          />
-        </header>
-      </>
+      <header className={classNames(cls.navbar, {}, [className])}>
+        <AppLink
+          theme={AppLinkTheme.SECONDARY}
+          to={RoutePath.article_create}
+          className={cls.newArticleBtn}
+        >
+          {t('Создать статью')}
+        </AppLink>
+        <Dropdown
+          direction="bottom-left"
+          className={cls.dropdown}
+          items={[
+            { content: t('Выйти'), onClick: onLogout },
+            { content: t('Профиль'), href: RoutePath.profile + authData.id },
+          ]}
+          trigger={<Avatar size={30} src={authData.avatar} />}
+        />
+      </header>
     )
   }
 
