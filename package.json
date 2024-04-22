@@ -21,7 +21,8 @@
     "storybook:build": "build-storybook -c ./config/storybook && loki update --storiesFilter=\"^entities\\/Comments\\/CommentCard Normal|entities\\/Comments\\/CommentCard Loading|entities\\/Comments\\/CommentList Normal|entities\\/Comments\\/CommentList Loading|features\\/AddNewComment Normal|features\\/LoginForm Primary|features\\/LoginForm With Error|features\\/LoginForm Loading|entities\\/ProfileCard Primary|Pages\\/ProfilePage Normal|Pages\\/ProfilePage Dark|Pages\\/ArticlesPage Normal$\" --reactUri=\"file:./storybook-static\"",
     "test:ui:json": "node scripts/generate-visual-json-report.js",
     "test:ui:report": "npx reg-cli --from .loki/report.json --report .loki/report.html",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate:slice": "node ./scripts/createSlice/index.js"
   },
   "keywords": [],
   "author": "",
