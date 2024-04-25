@@ -619,6 +619,12 @@
       "userId": "1",
       "text": "52",
       "id": "cc-wXcD"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "Никита лох",
+      "id": "6fO7jKI"
     }
   ],
   "users": [
@@ -643,7 +649,7 @@
       "first": "Максончик Админка",
       "lastname": "asf",
       "age": 465,
-      "currency": "RUB",
+      "currency": "USD",
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
