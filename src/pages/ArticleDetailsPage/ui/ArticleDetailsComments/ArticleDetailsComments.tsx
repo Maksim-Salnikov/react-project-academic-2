@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react'
+import { Suspense, memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { AddNewComment } from 'features/addNewComment'
@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux'
 import { getArticleComments } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice'
 import { getArticleCommentsIsLoading } from 'pages/ArticleDetailsPage/model/selectors/comments'
 import { VStack } from 'shared/ui/Stack'
+import { Loader } from 'shared/ui/Loader/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string
@@ -38,11 +39,13 @@ export const ArticleDetailsComments = memo(
     })
 
     return (
-      <VStack gap="16" max className={classNames('', {}, [className])}>
-        <Text size={TextSize.L} title={t('Комментарии')} />
-        <AddNewComment onSendComment={onSendComment} />
-        <CommentList isLoading={commentsIsLoading} comments={comments} />
-      </VStack>
+      <Suspense fallback={<Loader />}>
+        <VStack gap="16" max className={classNames('', {}, [className])}>
+          <Text size={TextSize.L} title={t('Комментарии')} />
+          <AddNewComment onSendComment={onSendComment} />
+          <CommentList isLoading={commentsIsLoading} comments={comments} />
+        </VStack>
+      </Suspense>
     )
   },
 )
