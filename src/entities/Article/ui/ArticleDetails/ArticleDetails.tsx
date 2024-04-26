@@ -85,7 +85,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
   if (isLoading) {
     content = (
-      <VStack gap="8">
+      <VStack gap="8" max>
         <Skeleton
           className={cls.avatar}
           width={200}
@@ -136,6 +136,7 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount={true}>
       <VStack
         gap="16"
+        max
         className={classNames(cls.articleDetails, {}, [className])}
       >
         {content}
