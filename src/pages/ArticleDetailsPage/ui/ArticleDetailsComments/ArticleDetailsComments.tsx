@@ -16,7 +16,7 @@ import { Loader } from 'shared/ui/Loader/Loader'
 
 interface ArticleDetailsCommentsProps {
   className?: string
-  id: string
+  id?: string
 }
 
 export const ArticleDetailsComments = memo(

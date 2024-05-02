@@ -28,7 +28,7 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import { HStack, VStack } from 'shared/ui/Stack'
 
 interface ArticleDetailsProps {
-  id: string
+  id?: string
   className?: string
 }
 

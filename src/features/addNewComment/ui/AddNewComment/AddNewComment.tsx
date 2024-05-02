@@ -33,7 +33,7 @@ const AddNewComment: FC<AddNewCommentProps> = (props) => {
   const dispatch = useAppDispatch()
 
   const onChangeTextComment = useCallback(
-    (value) => {
+    (value: string) => {
       dispatch(AddNewCommentActions.setText(value))
     },
     [dispatch],

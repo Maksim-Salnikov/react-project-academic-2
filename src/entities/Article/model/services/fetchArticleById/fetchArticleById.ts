@@ -6,10 +6,14 @@ import { Article } from '../../types/article'
 export const fetchArticleById = createAsyncThunk<
   Article,
   // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-  string,
+  string | undefined,
   ThunkConfig<string>
 >('article/fetchArticleById', async (articleId, thunkApi) => {
   const { extra, rejectWithValue } = thunkApi
+
+  if(!articleId) {
+    throw new Error('Ошибка при загрузке статей')
+  }
 
   try {
     const response = await extra.api.get<Article>('/articles/' + articleId, {

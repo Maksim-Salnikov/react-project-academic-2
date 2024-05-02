@@ -6,10 +6,14 @@ import { Profile } from 'entities/Profile'
 export const fetchProfileData = createAsyncThunk<
   Profile,
   // eslint-disable-next-line @typescript-eslint/no-invalid-void-type
-  string,
+  string | undefined,
   ThunkConfig<string>
 >('profile/fetchProfileData', async (profileId, thunkApi) => {
   const { extra, rejectWithValue } = thunkApi
+
+  if(!profileId) {
+    throw new Error('Ошибка при загрузке профиля')
+  }
 
   try {
     const response = await extra.api.get<Profile>('/profile/' + profileId)
