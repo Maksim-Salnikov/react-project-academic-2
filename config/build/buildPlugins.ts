@@ -5,6 +5,7 @@ import { type BuildOptions } from './types/config'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
 
 export function buildPlugins({
   paths,
@@ -28,6 +29,10 @@ export function buildPlugins({
     }),
     new CopyPlugin({
       patterns: [{ from: String(paths.locales), to: paths.buildLocales }],
+    }),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: true,
     }),
   ]
 
