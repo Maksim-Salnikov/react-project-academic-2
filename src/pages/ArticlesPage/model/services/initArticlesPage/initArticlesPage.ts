@@ -4,10 +4,7 @@ import { getArticlePageInited } from '../../selectors/articlesPageSelectors'
 import { articlesPageActions } from '../../slices/articlePageSlice'
 import { fetchArticlesList } from '../fetchArticlesList/fetchArticlesList'
 import { SortOrder } from 'shared/types'
-import {
-  ArticleSortField,
-  ArticleType,
-} from 'entities/Article/model/types/article'
+import { ArticleSortField, ArticleType } from 'entities/Article'
 
 export const initArticlesPage = createAsyncThunk<
   // eslint-disable-next-line @typescript-eslint/no-invalid-void-type

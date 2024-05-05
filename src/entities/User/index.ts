@@ -7,3 +7,4 @@ export {
   isUserManager,
   getUserRoles,
 } from './model/selectors/roleSelectors/roleSelectors'
+export { UserRole } from './model/consts/consts'

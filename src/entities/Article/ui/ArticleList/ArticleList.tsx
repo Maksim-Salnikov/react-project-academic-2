@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleList.module.scss'
-import { Article, ArticleView } from '../../model/types/article'
+import { Article } from '../../model/types/article'
+import { ArticleView } from '../../model/consts/consts'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItemSkeleton'
 import { Text, TextSize } from 'shared/ui/Text/Text'
@@ -84,7 +85,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
         scrollTop,
       }) => (
         <div
-        // @ts-ignore
+          // @ts-ignore
           ref={registerChild}
           className={classNames(cls.articleList, {}, [className, cls[view]])}
         >
