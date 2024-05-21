@@ -5,6 +5,12 @@
   display: flex;
   align-items: center;
   padding: calc((var(--navbar-height) - var(--navbar-inside)) / 2);
+  justify-content: space-between;
+}
+
+.Popover {
+  height: 20px;
+  width: 20px;
 }
 
 .links,
