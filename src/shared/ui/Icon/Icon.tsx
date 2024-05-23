@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Icon.module.scss'
 
@@ -8,7 +8,7 @@ interface IconProps {
   inverted?: boolean
 }
 
-export const Icon: FC<IconProps> = (props) => {
+export const Icon = memo((props: IconProps) => {
   const { className, Svg, inverted } = props
 
   return (
@@ -18,4 +18,4 @@ export const Icon: FC<IconProps> = (props) => {
       ])}
     />
   )
-}
+})
