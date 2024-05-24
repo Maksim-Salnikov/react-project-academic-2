@@ -4,14 +4,14 @@ import {
   ReducersMapObject,
   configureStore,
 } from '@reduxjs/toolkit'
-import { counterReducer } from 'entities/Counter'
-import { userReducer } from 'entities/User'
+import { counterReducer } from '@/entities/Counter'
+import { userReducer } from '@/entities/User'
 // import { loginReducer } from 'features/AuthByUsername'
 import { createReducerManager } from './reducerManager'
-import { $api } from 'shared/api/api'
+import { $api } from '@/shared/api/api'
 import { StateSchema, ThunkExtraArg } from './StateSchema'
-import { uiReducer } from 'features/UI'
-import { rtkApi } from 'shared/api/rtkApi'
+import { uiReducer } from '@/features/UI'
+import { rtkApi } from '@/shared/api/rtkApi'
 
 export function createReduxStore(
   initialState?: StateSchema,

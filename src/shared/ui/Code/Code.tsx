@@ -1,8 +1,8 @@
 import { useCallback } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './Code.module.scss'
 import { Button, ButtonTheme } from '../Button/Button'
-import CopyIcon from 'shared/assets/icons/Copy.svg'
+import CopyIcon from '@/shared/assets/icons/Copy.svg'
 
 interface CodeProps {
   className?: string

@@ -1,13 +1,13 @@
 import { memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { classNames } from 'shared/lib/classNames/classNames'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import cls from './ArticleDetails.module.scss'
 import {
   DynamicModuleLoader,
   ReducersList,
-} from 'shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
+} from '@/shared/lib/components/DinamicModuleLoader/DynamicModuleLoader'
 import { articleDetailsReducer } from '../../model/slice/articleDetailsSlice'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById'
 import { useSelector } from 'react-redux'
 import {
@@ -15,18 +15,18 @@ import {
   getArticleDetailsError,
   getArticleDetailsIsloading,
 } from '../../model/selectors/articeDetails'
-import { Text, TextAlign, TextSize, TextTheme } from 'shared/ui/Text/Text'
-import { Skeleton } from 'shared/ui/Skeleton/Skeleton'
-import { Avatar } from 'shared/ui/Avatar/Avatar'
-import EyeIcon from 'shared/assets/icons/Eye.svg'
-import CalendarIcon from 'shared/assets/icons/Calendar.svg'
-import { Icon } from 'shared/ui/Icon/Icon'
+import { Text, TextAlign, TextSize, TextTheme } from '@/shared/ui/Text/Text'
+import { Skeleton } from '@/shared/ui/Skeleton/Skeleton'
+import { Avatar } from '@/shared/ui/Avatar/Avatar'
+import EyeIcon from '@/shared/assets/icons/Eye.svg'
+import CalendarIcon from '@/shared/assets/icons/Calendar.svg'
+import { Icon } from '@/shared/ui/Icon/Icon'
 import { ArticleBlock } from '../../model/types/article'
 import { ArticleBlockType } from '../../model/consts/consts'
 import { ArticleCodeBlockComponent } from '../ArticleCodeBlockComponent/ArticleCodeBlockComponent'
 import { ArticleImageBlockComponent } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
-import { HStack, VStack } from 'shared/ui/Stack'
+import { HStack, VStack } from '@/shared/ui/Stack'
 
 interface ArticleDetailsProps {
   id?: string

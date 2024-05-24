@@ -1,5 +1,5 @@
 import { getProfileIsloading } from './getProfileIsloading'
-import { StateSchema } from 'app/providers/StoreProvider'
+import { StateSchema } from '@/app/providers/StoreProvider'
 
 describe('getProfileIsloading', () => {
   test('should return ProfileIsloading value', () => {

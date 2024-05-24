@@ -1,7 +1,7 @@
 import i18n from 'i18next'
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import { ThunkConfig } from 'app/providers/StoreProvider'
-import { Article } from 'entities/Article'
+import { ThunkConfig } from '@/app/providers/StoreProvider'
+import { Article } from '@/entities/Article'
 import {
   getArticlePageLimit,
   getArticlePageNum,
@@ -10,8 +10,8 @@ import {
   getArticlePageSort,
   getArticlePageType,
 } from '../../selectors/articlesPageSelectors'
-import { addQueryParams } from 'shared/lib/url/addQueryParams/addQueryParams'
-import { ArticleType } from 'entities/Article/model/consts/consts'
+import { addQueryParams } from '@/shared/lib/url/addQueryParams/addQueryParams'
+import { ArticleType } from '@/entities/Article/model/consts/consts'
 
 interface FetchArticlesListProps {
   replace?: boolean
